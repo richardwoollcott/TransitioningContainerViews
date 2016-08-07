@@ -10,33 +10,33 @@ namespace ContainerViews
         private NSString SegueIdentifierFirst = (NSString)"embedFirst";
         private NSString SegueIdentifierSecond = (NSString)"embedSecond";
 
-        private TaskCompletionSource<bool> viewChangingTcs;
+        private TaskCompletionSource<bool> viewChanging;
 
         public ContainerViewController(IntPtr handle) : base(handle)
         {
         }
 
-        public TaskCompletionSource<bool> ViewChangingTcs
+        public TaskCompletionSource<bool> ViewChanging
         {
-            get { return viewChangingTcs; }
+            get { return viewChanging; }
         }
 
         public Task<bool> PresentFirstViewAsync()
         {
-            viewChangingTcs = new TaskCompletionSource<bool>();
+            viewChanging = new TaskCompletionSource<bool>();
 
             PerformSegue(SegueIdentifierFirst, this);
 
-            return viewChangingTcs.Task;
+            return viewChanging.Task;
         }
 
         public Task<bool> PresentSecondViewAsync()
         {
-            viewChangingTcs = new TaskCompletionSource<bool>();
+            viewChanging = new TaskCompletionSource<bool>();
 
             PerformSegue(SegueIdentifierSecond, this);
 
-            return viewChangingTcs.Task;
+            return viewChanging.Task;
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue,
@@ -67,7 +67,7 @@ namespace ContainerViews
 
             viewController.DidMoveToParentViewController(this);
 
-            viewChangingTcs.TrySetResult(true);
+            viewChanging.TrySetResult(true);
         }
 
         private void SwapFromViewController(UIViewController fromViewController,
@@ -89,7 +89,7 @@ namespace ContainerViews
                             fromViewController.RemoveFromParentViewController();
                             toViewController.DidMoveToParentViewController(this);
 
-                            viewChangingTcs.TrySetResult(true);
+                            viewChanging.TrySetResult(true);
                         });
         }
     }

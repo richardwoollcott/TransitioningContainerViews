@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitioningContainerViews", "TransitioningContainerViews\TransitioningContainerViews.csproj", "{CC37C70D-743A-4B7A-8E26-77BBA327B02F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Release|iPhone.ActiveCfg = Release|iPhone
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Release|iPhone.Build.0 = Release|iPhone
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{CC37C70D-743A-4B7A-8E26-77BBA327B02F}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal

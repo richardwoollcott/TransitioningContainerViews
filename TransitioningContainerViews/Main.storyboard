@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" id="35" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="280" width="335" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="37" kind="embed" id="36" identifier="embedContainer"/>
+                                </connections>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="347" width="326" height="300"/>
+                                </variation>
+                                <constraints>
+                                    <constraint id="263" firstAttribute="width" constant="335"/>
+                                    <constraint id="264" firstAttribute="height" constant="300"/>
+                                </constraints>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="309">
+                                <rect key="frame" x="126" y="134" width="123" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint id="261" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="35" secondAttribute="trailing" constant="20"/>
+                            <constraint id="262" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="35" secondAttribute="bottom" constant="87"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MainContainer" destination="35" id="name-outlet-35"/>
+                        <outlet property="SegmentedView" destination="309" id="name-outlet-309"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="107"/>
+        </scene>
+        <scene sceneID="38">
+            <objects>
+                <viewController id="37" sceneMemberID="viewController" customClass="ContainerViewController" storyboardIdentifier="ContainerVC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="33"/>
+                        <viewControllerLayoutGuide type="bottom" id="34"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="39">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <segue id="158" destination="49" kind="custom" identifier="embedFirst" customClass="EmptySegue"/>
+                        <segue id="202" destination="56" kind="custom" identifier="embedSecond" customClass="EmptySegue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="290"/>
+        </scene>
+        <scene sceneID="48">
+            <objects>
+                <viewController id="49" sceneMemberID="viewController" customClass="FirstViewController" storyboardIdentifier="FirstVC" modalPresentationStyle="currentContext">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="46"/>
+                        <viewControllerLayoutGuide type="bottom" id="47"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="50">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0" green="1" blue="1" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="208" translatesAutoresizingMaskIntoConstraints="NO" text="First View">
+                                <rect key="frame" x="252" y="283" width="96" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="115" y="140" width="96" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="251"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="251" firstAttribute="width" constant="96"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="251"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="249" firstItem="50" firstAttribute="bottom" secondItem="208" secondAttribute="bottom" constant="139"/>
+                            <constraint id="250" firstItem="50" firstAttribute="trailing" secondItem="208" secondAttribute="trailing" constant="115"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="249"/>
+                                <exclude reference="250"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="249"/>
+                                <include reference="250"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="326" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="326" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="101"/>
+        </scene>
+        <scene sceneID="55">
+            <objects>
+                <viewController id="56" sceneMemberID="viewController" customClass="SecondViewController" storyboardIdentifier="SecondVC" modalPresentationStyle="currentContext">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="53"/>
+                        <viewControllerLayoutGuide type="bottom" id="54"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="57">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="1" green="0.49803921568627452" blue="0" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="209" translatesAutoresizingMaskIntoConstraints="NO" text="Second View">
+                                <rect key="frame" x="242" y="290" width="115" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="106" y="140" width="115" height="21"/>
+                                    <mask key="constraints">
+                                        <include reference="254"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="254" firstAttribute="width" constant="115"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="254"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="252" firstItem="57" firstAttribute="bottom" secondItem="209" secondAttribute="bottom" constant="139"/>
+                            <constraint id="253" firstItem="57" firstAttribute="trailing" secondItem="209" secondAttribute="trailing" constant="105"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="252"/>
+                                <exclude reference="253"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="252"/>
+                                <include reference="253"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="326" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="326" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379" y="504"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
+</document>
